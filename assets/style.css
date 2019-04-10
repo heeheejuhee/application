@@ -4,7 +4,8 @@
   list-style-type: none; }
 
 main {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .btn-back {
   color: white;
@@ -31,12 +32,33 @@ main {
   #Home .home__bottom {
     background-color: #341a09; }
     #Home .home__bottom h3 {
-      color: #fff; }
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      letter-spacing: 2px;
+      padding-top: 1em;
+      padding-bottom: 0.5em;
+      font-size: 22px; }
+    #Home .home__bottom hr {
+      border: none;
+      height: 1px;
+      color: #fff;
+      background-color: #fff; }
     #Home .home__bottom p {
-      color: #fff; }
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+      font-size: 14px;
+      padding-top: 1em; }
     #Home .home__bottom a {
       text-decoration: none;
       color: #fff; }
+    #Home .home__bottom .content {
+      width: 261px;
+      margin: auto;
+      text-align: center;
+      display: flex;
+      flex-flow: column; }
 
 #QuickStart {
   background: red; }
