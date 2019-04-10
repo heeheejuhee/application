@@ -4,7 +4,9 @@ $(function(){
         if($(this).attr('href')=="/quickstart"){
             $("#QuickStart").css({'left':'0'})
         } else {
-            $("#Login").css({'left':'0'})
+            $("#Login").click(function(e){
+                e.preventDefault();
+            })
         }
     })
 
