@@ -118,10 +118,11 @@ main{
     
     .module-wrapper {
         width: 100%;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
+        // display: flex;
+        // flex-flow: column;
+        // align-items: center;
         position: relative;
+        // border:1px red solid;
 
         p {
             color: #fff;
@@ -130,6 +131,8 @@ main{
             text-align: center;
             letter-spacing: 0.7px;
             line-height: 1.4;
+            margin-top: -0.5em;
+            margin-bottom: 2em;
         }
     }
     .back-btn {
@@ -139,17 +142,66 @@ main{
     }
 
     .logo {
-        width: 256px;
-        margin-top: 2em;
+        width: 60%;
+        margin: 1em auto;
+        img{
+            display: block;
+            width: 100%;
+        }
     }
 // <!---------- Order Type BUTTON --------->
-    .bike {
-         width: 100px;
+    .ordertype_icon {
+         width: 60px;
     }
 
     .button {
         text-decoration: none;
-        color: #fff;
+        color: #341a09;
+        letter-spacing: 0.8px;
+        // border:1px red solid;
+        display: block;
+        width: 82%;
+        margin: 1em auto;
+        display: flex;
+        align-items: center;
+        border-radius: 0.5em;
+        padding:1em;
+        box-sizing: border-box;
+        // .button-image{
+        //     display: block;
+        //     img{
+        //         display: block;
+        //         width: 100%;
+        //     }
+        // }
+
+        .button-text{
+            flex:1 0 auto;
+            // border:1px red solid;
+            display: block;
+            font-size: 1.7em;
+            margin-left:0.5em;
+            padding-left:0.5em;
+            border-left: thin #341a09 solid;
+            text-transform: uppercase;
+            font-weight: 700;
+
+            .sub{
+                display: block;
+                font-size: 0.2em;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+            }
+        }
+
+    }
+
+    .delivery {
+        background-color: #407721;
+    }
+
+    .pick-up {
+        background-color: #e69a23;
     }
 
 

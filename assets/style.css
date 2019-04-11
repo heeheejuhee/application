@@ -86,9 +86,6 @@ main {
     position: absolute; }
   #QuickStart .module-wrapper {
     width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
     position: relative; }
     #QuickStart .module-wrapper p {
       color: #fff;
@@ -96,19 +93,51 @@ main {
       font-weight: 100;
       text-align: center;
       letter-spacing: 0.7px;
-      line-height: 1.4; }
+      line-height: 1.4;
+      margin-top: -0.5em;
+      margin-bottom: 2em; }
   #QuickStart .back-btn {
     width: 43px;
     margin-top: 15px;
     margin-left: 8px; }
   #QuickStart .logo {
-    width: 256px;
-    margin-top: 2em; }
-  #QuickStart .bike {
-    width: 100px; }
+    width: 60%;
+    margin: 1em auto; }
+    #QuickStart .logo img {
+      display: block;
+      width: 100%; }
+  #QuickStart .ordertype_icon {
+    width: 60px; }
   #QuickStart .button {
     text-decoration: none;
-    color: #fff; }
+    color: #341a09;
+    letter-spacing: 0.8px;
+    display: block;
+    width: 82%;
+    margin: 1em auto;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5em;
+    padding: 1em;
+    box-sizing: border-box; }
+    #QuickStart .button .button-text {
+      flex: 1 0 auto;
+      display: block;
+      font-size: 1.7em;
+      margin-left: 0.5em;
+      padding-left: 0.5em;
+      border-left: thin #341a09 solid;
+      text-transform: uppercase;
+      font-weight: 700; }
+      #QuickStart .button .button-text .sub {
+        display: block;
+        font-size: 0.2em;
+        font-weight: 700;
+        letter-spacing: 0.5px; }
+  #QuickStart .delivery {
+    background-color: #407721; }
+  #QuickStart .pick-up {
+    background-color: #e69a23; }
 
 #Login {
   background: blue; }
