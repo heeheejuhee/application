@@ -49,6 +49,7 @@ nav {
     	height: 75px;
     	border-radius: 100%;
     	margin: 0 0.3em;
+    	cursor: pointer;
 
 		img {
 			width: 38px;
@@ -70,16 +71,49 @@ nav {
 // Menu List Section
 
 .menu-list {
-	width: 100%;
-	background-color: red;
-	margin-top: 1em;
+	display: flex;
+	flex-flow: wrap;
+    justify-content: space-evenly;
 
-	.menu-image {
-		
-		img {
-			width: 15em;
+	.menu {
+		width: 45%;
+		display: inline-block;
+		background-color: #fff;
+		margin-top: 1em;
+		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		transition: 0.3s;
+		border-radius: 5px;	
+	}
+	.menu:hover {
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	}
+
+	img {
+		width: 100%;
+		border-radius: 5px 5px 0 0;
+	}
+
+	.menu-detail {
+		padding: 7px;
+
+		h3 {
+			font-size: 1em;
+		}
+		p {
+			font-size: 0.7em;
+			margin-top: 0.3em;
+			color: #707070;
+		}
+		hr {
+			border: none;
+            height: 1px;
+            color: #fff;
+            background-color: darkgrey;
+            margin: 0.46em 0;
 		}
 	}
+
+	
 }
 
 
