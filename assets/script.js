@@ -18,4 +18,18 @@ $(function(){
     $(".btn-back").click(function(e){
         e.preventDefault();
     })
+
+
+    $('[data-url]').on('click',function(){
+
+        var url = $(this).data('url');
+        console.log(url);
+        window.location.href = url ;
+    })
+
+    $('.increase').click(function(){
+        $('.quantity').html(function(i,val){
+            return var*1+1
+        });
+    })
 })
