@@ -4,10 +4,13 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Ramen Lab : customize your ramen</title>
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto:100,300,400|Source+Sans+Pro:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
 	<link rel="stylesheet" href="assets/style.css">
 </head>
 <body id="Customize">
+    
+
 
 	<div class="top">
 		<a href="order.html" class="back-btn">
@@ -32,12 +35,14 @@
 
 	<div class="ramen-img">
 		<img src="assets/tonkotsu-topview.png" alt="">
-		<div class="yourorder-box">
-			<div class="yourorder-box-wrapper">
-				<span>YOUR ORDER</span>
-				<div class="quantity">1</div>
-			</div>
-		</div>
+		<!-- <a href="order-summary.html"> -->
+            <div class="yourorder-box">
+    			<div class="yourorder-box-wrapper">
+    				<span>YOUR ORDER</span>
+    				<div class="quantity">1</div>
+    			</div>
+		    </div>
+       <!--  </a> -->
 	</div>
 	
 	<div class="ingredients-wrapper">
@@ -45,6 +50,30 @@
             <img src="assets/shrimp.png" alt="">
              <div class="ingredients-content">
                 <h2>Shrimp</h2>
+                <p>$0.50</p>
+                <div class="add-box add-box-small">
+                    <button class="minus">-</button>
+                    <span>0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="ingredients">
+            <img src="assets/mushroom.png" alt="">
+             <div class="ingredients-content">
+                <h2>Mushroom</h2>
+                <p>$0.50</p>
+                <div class="add-box add-box-small">
+                    <button class="minus">-</button>
+                    <span>0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="ingredients">
+            <img src="assets/seaweed.png" alt="">
+             <div class="ingredients-content">
+                <h2>Seaweed</h2>
                 <p>$0.40</p>
                 <div class="add-box add-box-small">
                     <button class="minus">-</button>
@@ -54,9 +83,33 @@
             </div>
         </div>
         <div class="ingredients">
-            <img src="assets/shrimp.png" alt="">
+            <img src="assets/butter.png" alt="">
              <div class="ingredients-content">
-                <h2>Shrimp</h2>
+                <h2>butter</h2>
+                <p>$0.30</p>
+                <div class="add-box add-box-small">
+                    <button class="minus">-</button>
+                    <span>0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="ingredients">
+            <img src="assets/onion.png" alt="">
+             <div class="ingredients-content">
+                <h2>Onion</h2>
+                <p>$0.30</p>
+                <div class="add-box add-box-small">
+                    <button class="minus">-</button>
+                    <span>0</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="ingredients">
+            <img src="assets/spinach.png" alt="">
+             <div class="ingredients-content">
+                <h2>Spinach</h2>
                 <p>$0.40</p>
                 <div class="add-box add-box-small">
                     <button class="minus">-</button>
@@ -66,9 +119,9 @@
             </div>
         </div>
         <div class="ingredients">
-            <img src="assets/shrimp.png" alt="">
+            <img src="assets/bamboo.png" alt="">
              <div class="ingredients-content">
-                <h2>Shrimp</h2>
+                <h2>Bamboo</h2>
                 <p>$0.40</p>
                 <div class="add-box add-box-small">
                     <button class="minus">-</button>
@@ -78,10 +131,10 @@
             </div>
         </div>
         <div class="ingredients">
-            <img src="assets/shrimp.png" alt="">
+            <img src="assets/egg.png" alt="">
              <div class="ingredients-content">
-                <h2>Shrimp</h2>
-                <p>$0.40</p>
+                <h2>Egg</h2>
+                <p>$1.00</p>
                 <div class="add-box add-box-small">
                     <button class="minus">-</button>
                     <span>0</span>
@@ -91,8 +144,38 @@
         </div>
 	</div>
 
+    <div class="popup popup1">
+        <div class="container">
+            <i class="fas fa-times-circle dismiss"></i>
+            <h1>YOUR ORDER</h1>
+            <div class="contents">
+                <p class="title"><span class="item">TONKOTSU RAMEN</span> <span class="line"></span><span class="quantity">1</span></p>
+                <p><span class="item color">Prawn</span> <span class="line"></span><span class="quantity color">1</span></p>
+                <p><span class="item color">Butter</span> <span class="line"></span><span class="quantity color">1</span></p>
+                <p><span class="item color">Spinach</span> <span class="line"></span><span class="quantity color">1</span></p>
+            </div>
+            <span>ToTal $13.20</span>
+            <button class="next">Next</button>
+        </div>
+    </div>
+
+    <div class="popup popup2">
+        <div class="container">
+            <i class="fas fa-times-circle dismiss"></i>
+            <h1>YOUR ORDER 2</h1>
+            <div>
+                <h3>TONKOTSU RAMEN</h3>
+                <p>Prawn</p>
+                <p>Butter</p>
+                <p>Spinach</p>
+            </div>
+            <span>ToTal $13.20</span>
+        </div>
+    </div>
+
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="assets/script.min.js"></script>
+<!--     <script src="assets/script.min.js"></script> -->
+    <script src="assets/script.js"></script>
 </body>
 </html>

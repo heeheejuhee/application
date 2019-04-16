@@ -120,4 +120,15 @@ $(function(){
     //         return var*1+1
     //     });
     // })
+
+
+    $('.yourorder-box, .popup1 .dismiss').on('click',function(){
+        $('.popup1').toggleClass('show');
+    });
+
+    $('button.next, .popup2 .dismiss').on('click',function(){
+        $('.popup1').removeClass('show')
+        $('.popup2').toggleClass('show');
+    });
+
 })
