@@ -114,21 +114,29 @@ $(function(){
         });
     }
 
-
-    // $('.increase').click(function(){
-    //     $('.quantity').html(function(i,val){
-    //         return var*1+1
-    //     });
-    // })
-
-
-    $('.yourorder-box, .popup1 .dismiss').on('click',function(){
-        $('.popup1').toggleClass('show');
+    $('.yourorder-box').on('click',function(){
+        $('.popup-1').addClass('show');
     });
 
-    $('button.next, .popup2 .dismiss').on('click',function(){
-        $('.popup1').removeClass('show')
-        $('.popup2').toggleClass('show');
+
+    $('.yourorder-box, .popup .dismiss').on('click',function(){
+        $(this).parents('.popup').removeClass('show');
+    });
+
+    $('.popup button.next').on('click',function(){
+        var thisPopup = $(this).parents('.popup');
+        var thisIndex = $(thisPopup).data('index');
+
+
+        thisPopup.removeClass('show');
+
+        for(var i = 0; i < $('.popup').length; i++){
+            var popup = $('.popup')[i]
+
+            if($(popup).data('index') == thisIndex+1){
+                $(popup).addClass('show');
+            }
+        }
     });
 
 })
