@@ -122,8 +122,8 @@ $(function(){
     $('.yourorder-box, .popup .dismiss').on('click',function(){
         $(this).parents('.popup').removeClass('show');
     });
-
-    $('.popup button.next').on('click',function(){
+    
+    $('.popup button.next, .place-order').on('click',function(){
         var thisPopup = $(this).parents('.popup');
         var thisIndex = $(thisPopup).data('index');
 
