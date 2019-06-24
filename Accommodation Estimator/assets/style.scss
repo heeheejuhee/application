@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(background.jpg);
+	background-position: top; /* Center the image */
+  	background-repeat: no-repeat;
+}
+
+////////////////// Circular navigation
+
+ul {
+	margin-left: 40px;
+
+	li{
+		margin: 10px;
+		text-align: center;
+		list-style: none;
+		position: absolute;
+		top:0;
+		left:0;
+
+		a {
+			text-align: center;
+			border-radius: 50%;
+			width: 55px;
+			height: 55px;
+			background-color: #333C4D;
+			border: 1px white solid;
+			padding: 10px;
+			display: block;
+		}
+	}
+
+	li:nth-child(1){
+		// top:;
+		left:40vw;
+		top:40vw;
+	}
+
+	li:nth-child(2){
+		// top:;
+		left:40vw;
+		top:40vw;
+	}
+
+	li:nth-child(3){
+		// top:;
+		left:50vw;
+		top:60vw;
+	}
+
+	li:nth-child(4){
+		// top:;
+		left:50vw;
+		top:60vw;
+	}
+
+
+	.link-name {
+
+	}
+}
+// 	}
+// }
+
+.welligton-background{
+	width: 130vw;
+	height: 130vw;
+	position: absolute;
+	top:54%;
+	left:0;
+	transform:translate(-50%,-50%);
+	border-radius: 50%;
+	display: flex;
+	border:1px white solid;
+
+	.site{
+		border-radius: 50%;
+		margin:3em;
+		border:1px white solid;
+		flex:1 0 auto;
+		background-image: url(wellington.jpg);
+		background-size:cover;
+		padding:0.3em;
+		background-clip: content-box;
+	}
+}
