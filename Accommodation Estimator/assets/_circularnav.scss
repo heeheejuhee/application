@@ -1,0 +1,144 @@
+.circular-nav {
+    position:absolute;
+    top:52%;
+    left:0;
+    width:520px;
+    height:520px;
+    transform:translate(-50%,-50%);
+    border-radius:100%;
+    border: 2px solid white;
+    padding:50px;
+
+    .circular-nav-container {
+        position:relative;
+        width:100%;
+        height:100%;
+        padding:5px;
+        border-radius: 100%;
+        border: 2px solid white;
+    }
+
+    //location info
+    .location-info {
+        position:relative;
+        width:100%;
+        height:100%;
+        background: url(wellington.jpg) center center /cover no-repeat;
+        width:100%;
+        height:100%;
+        border-radius: 100%;
+
+        .location-info-wrapper {
+            display:flex;
+            flex-flow:column nowrap;
+            justify-content: center;
+            width:50%;
+            height:100%;
+            padding:0 2px 0 10px;
+            margin-left:50%;
+            color:white;
+
+            .location-capital{
+                font-size: 12px;
+                margin-bottom:5px;
+            }
+            .location-name{
+                font-size: 26px;
+                font-weight:bold;
+                text-transform:uppercase;
+                margin-bottom:5px;
+            }
+            .location-date{
+                font-size: 14px;
+                font-weight:bold;
+                padding: 5px 0;
+                border-top: 1px solid white;
+                border-bottom: 1px solid white;
+                margin-bottom:5px;
+            }
+            .location-temp{
+                font-size: 50px;
+                font-weight:bold;
+            }
+        }
+    }
+    //end of location info
+    //Circular Navigation
+    .circular-navigation {
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height: 100%;
+
+        .nav-lists {
+            position:relative;
+            width:100%;
+            height:100%;
+
+            li {
+                position:absolute;
+                list-style:none;
+                left:50%;
+                bottom:50%;
+                width: 70px;
+                height:71%;
+                transform:translateX(-50%) rotate(-90deg);
+                transform-origin:bottom;
+
+                .nav-list-wrapper {
+                    position:relative;
+                    display:flex;
+                    flex-flow:column;
+                    justify-content:flex-start;
+
+                    a {
+                        position:relative;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        color:white;
+                        border:1px solid white;
+                        width:100%;
+                        height:70px;
+                        border-radius:100%;
+                        background-color: purple;
+
+                        span.nav-name {
+                            position:absolute;
+                            left:50%;
+                            opacity:0;
+                            margin-left:0%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.circular-nav-loaded {
+            .nav-lists li {
+                @for $i from 1 through 5 {
+                    //40/65/90/115/140
+                    $n: (($i - 1) * 25) + 40deg;
+                    $d : $i * 0.1s;
+                    $dd : $i * 0.2s;
+                    &:nth-child(#{$i}) {
+                        transition: 0.6s $d transform ease-in-out;
+                        transform: translateX(-50%) rotate($n);
+
+                        a {
+                            transform:rotate(-$n);
+                            span.nav-name {
+                                opacity: 1;
+                                margin-left: 65%;
+                                transition: 0.8s $dd all ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //End of Circular Navigation
+}
+
