@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 16px;
   color: white; }
   .top-nav .current-location {
     text-transform: uppercase;
@@ -44,6 +44,11 @@ body {
     font-size: 1.8em; }
   .top-nav .fa-bars {
     font-size: 1.6em; }
+  .top-nav .hide-bars {
+    display: none; }
+
+.top-nav-color {
+  background-color: #002f51; }
 
 .circular-nav {
   position: absolute;
