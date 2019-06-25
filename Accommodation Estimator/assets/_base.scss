@@ -1,3 +1,5 @@
+$font-stack: 'Source Sans Pro', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +11,7 @@
 body {
     position:relative;
     height:100vh;
-    background-image: url(background.jpg);
+    background-image: url(img/background.jpg);
     background-position: center; /* Center the image */
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,8 +42,19 @@ body {
     color:white;
     .current-location {
         text-transform: uppercase;
+        font-family: $font-stack;
+        font-weight: 600;
+        font-size: 1.5em;
+        letter-spacing: 1.5px;
     }
     a {
         color: white;
     }
+    .fa-chevron-left{
+        font-size: 1.8em;
+    }
+    .fa-bars{
+        font-size: 1.6em;
+    }
+
 }
