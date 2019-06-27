@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.1/animate.css">
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/style.css">
 </head>
@@ -14,7 +15,7 @@
     <div class="container">
         <nav class="top-nav">
             <a href=""><i class="fas fa-chevron-left"></i></a>
-            <h3 class="current-location">Wellington</h3>
+            <h3 class="current-location animated fadeInDown">Wellington</h3>
             <a href=""><i class="fas fa-bars"></i></a>
         </nav>
 
@@ -44,9 +45,9 @@
                     <ul class="nav-lists">
                         <li>
                             <div class="nav-list-wrapper">
-                                <a href="">
+                                <a href="" data-target=".layer-accommodation">
                                     <i class="fas fa-bed"></i>
-                                    <span class="nav-name">Accomodation</span>
+                                    <span class="nav-name" >Accomodation</span>
                                 </a>
                             </div>
                         </li>
@@ -92,7 +93,7 @@
 </div>
 
 
-<div class="layer layer-accommodation active">
+<div class="layer layer-accommodation ">
     <div class="container">
         <!-- header -->
         <nav class="top-nav top-nav-color">
@@ -121,12 +122,46 @@
             <button class="see-result-btn">See result</button>
             <p>Click here to see where you can stay</p>
         </div>
+
+        <!-- bottom content -->
+        <div class="contents-bottom">
+            <div class="accommodation-type">
+                <div class="type hostel">
+                    <img src="assets/img/hostel.png" alt="">
+                    <h3>Hostel</h3>
+                    <p>$30/night</p>
+                </div>
+            </div>
+            <div class="accommodation-type">
+                <div class="type motel">
+                    <img src="assets/img/Motel.png" alt="">
+                    <h3>Motel</h3>
+                    <p>$90/night</p>
+                </div>
+            </div>
+            <div class="accommodation-type">
+                <div class="type hotel">
+                    <img src="assets/img/hotel.png" alt="">
+                    <h3>Hotel</h3>
+                    <p>$157/night</p>
+                </div>
+            </div>
+            <div class="accommodation-type">
+                <div class="type house">
+                    <img src="assets/img/house.png" alt="">
+                    <h3>House</h3>
+                    <p>$240/night</p>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>
 
 
 
-<div class="layer layer-totalcost">
+<div class="layer layer-totalcost active">
     <div class="container">
         <nav class="top-nav top-nav-color">
             <a href=""><i class="fas fa-chevron-left"></i></a>
