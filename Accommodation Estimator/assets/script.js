@@ -70,25 +70,28 @@ $(function(){
             $('.layer').removeClass('active');
             $('.layer.layer-totalcost').addClass('active');
         })
+        $('.total-cost').unbind('click').on('click',function(){
+            $('#Result').addClass('active');
+            updateBreakfast(peopleValue);
+        })
     });
-
-    $('.total-cost').on('click',function(){
-        $('#Result').addClass('active');
-    })
 })
 
 function updateStatus(t, c, p, d){
     var totalcostPage = $('.layer-totalcost');
     var cost = d * c;
     var perPerson = cost / p;
-    var hasBreakfast = $('input[name=breakfast]:checked').val();
 
     totalcostPage.find('.title').text(t);
     totalcostPage.find('.people').text(p);
     totalcostPage.find('.days').text(d);
     totalcostPage.find('.final-cost').text(numberToDollar(cost));
     totalcostPage.find('.per-person').text(numberToDollar(perPerson));
-    if(hasBreakfast){
+}
+function updateBreakfast(p){
+    var totalcostPage = $('.layer-totalcost');
+    var hasBreakfast = $('input[name=breakfast]:checked').val();
+    if(hasBreakfast === "true"){
         totalcostPage.find('.has-breakfast').text(numberToDollar(p * 7));
     } else {
         totalcostPage.find('.has-breakfast').text(numberToDollar(0));
