@@ -46,6 +46,13 @@ body {
     font-size: 1.6em; }
   .top-nav .hide-bars {
     display: none; }
+  .top-nav h3 {
+    text-align: center; }
+    .top-nav h3 p {
+      font-size: 16px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 300;
+      text-transform: lowercase; }
 
 .top-nav-color {
   background-color: #002f51; }
@@ -206,6 +213,16 @@ body {
   .contents > h2 {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300; }
+  .contents .meal-question {
+    font-size: 1.4em; }
+  .contents .breakfast {
+    color: white;
+    letter-spacing: 1.2px;
+    text-align: right;
+    margin-right: 0.6em;
+    margin-top: 0; }
+  .contents .pretty {
+    margin-top: 1.5em; }
   .contents .number-controller {
     font-size: 1.9em;
     margin-top: 0.3em;
@@ -234,6 +251,8 @@ body {
     border: 1.47px white solid;
     margin-top: 0.5em;
     letter-spacing: 1.1px; }
+  .contents .total-cost {
+    margin-top: 2em; }
   .contents p {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;

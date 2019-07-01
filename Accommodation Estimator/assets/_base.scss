@@ -62,6 +62,16 @@ body {
         display: none;
     }
 
+    h3 {
+        text-align: center;
+        p {
+            font-size: 16px;
+            font-family: $font-stack;
+            font-weight: 300;
+            text-transform: lowercase;
+        }
+    }
+
 }
 
 .top-nav-color{

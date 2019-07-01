@@ -9,6 +9,23 @@
 		font-family: $font-stack;
 		font-weight: 300;
     }
+	
+	.meal-question{
+		font-size: 1.4em;
+	}
+
+	.breakfast {
+		color: white;
+		letter-spacing: 1.2px;
+		text-align: right;
+		margin-right: 0.6em;
+		margin-top: 0;
+	}
+	
+	.pretty{
+		margin-top: 1.5em;
+	}
+	// Number increase and decrease button
 
     .number-controller {
 		font-size: 1.9em;
@@ -32,6 +49,7 @@
 		>span{
 			font-size: 1.2em;
 		}
+
     }
 	
     .see-result-btn {
@@ -46,6 +64,10 @@
 		margin-top: 0.5em;
 		letter-spacing: 1.1px;
     }
+	
+	.total-cost {
+		margin-top: 2em;
+	}
 
     p {
     	font-family: $font-stack;

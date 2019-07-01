@@ -13,9 +13,5 @@ $(function(){
     	$(sLayer).addClass('active');
     });
 
-    // back button
-    $('.see-result-btn').on('click',function(){
-    	// window.history.back();
-    	// console.log('hi');
-    });
+    
 })
