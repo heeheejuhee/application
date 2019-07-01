@@ -80,80 +80,73 @@
 
 // 4 type buttons
 .contents-bottom {
-	// text-align: center;
-	width: 65%;
-	display: flex;
-	flex-wrap: wrap;
-	margin: auto;
+    // text-align: center;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 
-	.accommodation-type {
-	// display: flex;
-	// display: inline-block;
-	
+    .accommodation-type {
+        // display: flex;
+        // display: inline-block;
 
-		.type{
-			background-color: $primary-color;
-			color: white;
-			text-align: center;
-			// padding: 1.2em 1.5em;
-			border-radius: 10px;
-			border: 1.4px white solid;
-			margin: 0.2em;
+        .type{
+            background-color: $primary-color;
+            color: white;
+            text-align: center;
+            // padding: 1.2em 1.5em;
+            border-radius: 10px;
+            border: 1.4px white solid;
+            margin: 0.2em;
+            filter:brightness(0.6);
+            transition: filter .3s ease-in-out;
 
-			h3 {
-				font-family: $font-stack;
-				font-weight: 300; 
-				font-size: 1.3em;
-			}
+            &.active {
+                filter:brightness(1);
+            }
 
-			p {
-				font-family: $font-stack;
-				font-weight: 300;
-				font-size: 0.9em;
-			}
-		}
+            h3 {
+                font-family: $font-stack;
+                font-weight: 300; 
+                font-size: 1.3em;
+            }
 
-		.hostel {
-			padding: 0.7em 1.7em;
+            p {
+                font-family: $font-stack;
+                font-weight: 300;
+                font-size: 0.9em;
+            }
+            &.hostel {
+                padding: 0.7em 1.7em;
 
-			>img {
-				width: 3em;
-			}
-		}
+                >img {
+                    width: 3em;
+                }
+            }
 
-		.motel{
-			padding: 0.7em 1.74em;
+            &.motel{
+                padding: 0.7em 1.74em;
 
-			>img {
-				width: 3.5em;
-			}
-		}
-		.hotel{
-			padding: 0.45em 1.5em;
+                >img {
+                    width: 3.5em;
+                }
+            }
+            &.hotel{
+                padding: 0.45em 1.5em;
 
-			>img {
-				width: 3em;
-			}
-		}
-		.house{
-			padding: 0.57em 1.5em;
+                >img {
+                    width: 3em;
+                }
+            }
+            &.house{
+                padding: 0.57em 1.5em;
 
-			>img {
-				width: 3.2em;
-				margin: 0.3em 0em;
-			}
-		}
-	}
+                >img {
+                    width: 3.2em;
+                    margin: 0.3em 0em;
+                }
+            }
+        }
+
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
