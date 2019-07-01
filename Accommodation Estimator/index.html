@@ -94,7 +94,7 @@
 </div>
 
 
-<div class="layer layer-accommodation">
+<div class="layer layer-accommodation active">
     <div class="container">
         <!-- header -->
         <nav class="top-nav top-nav-color">
@@ -127,28 +127,28 @@
         <!-- bottom content -->
         <div class="contents-bottom">
             <div class="accommodation-type">
-                <div class="type hostel">
+                <div class="type hostel" data-type="hostel" data-cost="30">
                     <img src="assets/img/hostel.png" alt="">
                     <h3>Hostel</h3>
                     <p>$30/night</p>
                 </div>
             </div>
             <div class="accommodation-type">
-                <div class="type motel">
+                <div class="type motel" data-type="motel" data-cost="90">
                     <img src="assets/img/Motel.png" alt="">
                     <h3>Motel</h3>
                     <p>$90/night</p>
                 </div>
             </div>
             <div class="accommodation-type">
-                <div class="type hotel">
+                <div class="type hotel" data-type="hotel" data-cost="157">
                     <img src="assets/img/hotel.png" alt="">
                     <h3>Hotel</h3>
                     <p>$157/night</p>
                 </div>
             </div>
             <div class="accommodation-type">
-                <div class="type house">
+                <div class="type house" data-type="house" data-cost="240">
                     <img src="assets/img/house.png" alt="">
                     <h3>House</h3>
                     <p>$240/night</p>
@@ -162,12 +162,13 @@
 
 
 
-<div class="layer layer-totalcost active">
+<div class="layer layer-totalcost">
     <div class="container">
         <nav class="top-nav top-nav-color">
             <a href="" data-target=".layer-accommodation"><i class="fas fa-chevron-left"></i></a>
-            <h3 class="current-location">HOTEL
-                <p>(2 people, 2 days)</p>
+            <h3 class="current-location">
+                <span class="title">HOTEL</span>
+                <p>(<span class="people">2</span> people, <span class="days">2</span> days)</p>
             </h3>
             <a href=""><i class="fas fa-bars hide-bars"></i></a>
         </nav>
@@ -178,14 +179,14 @@
             <p class="breakfast">(Breakfast only: $7.00)</p>
 
             <div class="pretty p-default p-round">
-                <input type="radio" name="radio1">
+                <input type="radio" name="breakfast" value="false">
                 <div class="state">
                     <label>No thanks</label>
                 </div>
             </div>
 
             <div class="pretty p-default p-round">
-                <input type="radio" name="radio1">
+                <input type="radio" name="breakfast" value="true" checked>
                 <div class="state">
                     <label>Yes please</label>
                 </div>
@@ -194,9 +195,13 @@
             <!-- see result button -->
             <button class="see-result-btn total-cost">Total cost</button>
 
-           <div class="result">
-               <h2>2 people, 2 days at Hotel</h2>
-               <p></p>
+           <div id="Result" class="result">
+               <div class="title"></div>
+               <div class="people"></div>
+               <div class="days"></div>
+               <div class="final-cost"></div>
+               <div class="per-person"></div>
+               <div class="has-breakfast"></div>
            </div> 
 
         </div>

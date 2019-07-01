@@ -78,3 +78,11 @@ body {
 .top-nav-color{
     background-color: $secondary-color;
 }
+
+#Result {
+    display:none;
+
+    &.active{
+        display:block;
+    }
+}
