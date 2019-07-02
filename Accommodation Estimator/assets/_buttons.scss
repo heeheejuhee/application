@@ -78,6 +78,7 @@
 }
 
 
+
 // 4 type buttons
 .contents-bottom {
     // text-align: center;
@@ -99,7 +100,7 @@
             border-radius: 10px;
             border: 1.4px white solid;
             margin: 0.2em;
-            filter:brightness(0.6);
+            filter:brightness(0.5);
             transition: filter .3s ease-in-out;
 
             &.active {
@@ -151,3 +152,48 @@
 
     }
 }
+
+//Total cost button - result
+
+.result {
+    background-color: lightgrey;
+    height: 11em;
+    padding: 1em;
+    margin-top: 1.5em;
+    border-radius: 10px;
+    
+    .total-info {
+        font-size: 1.4em;
+
+        p {
+            display: inline-block;
+            color: $primary-color;
+            font-family: $font-stack;
+            font-weight: 600;
+        }
+    }
+
+    .summary{
+        display: inline-block;
+        color: $primary-color;
+        font-family: $font-stack;
+        font-weight: 400;
+        font-size: 1.1em;
+        margin-top: 1em;
+
+        span {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+

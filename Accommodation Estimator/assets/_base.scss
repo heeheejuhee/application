@@ -7,7 +7,7 @@ $secondary-color: #002f51;
     padding: 0;
     text-decoration:none;
     box-sizing: border-box;
-    font-family: helvetica, arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     outline:none;
 }
 
@@ -65,7 +65,7 @@ body {
 
     h3 {
         text-align: center;
-        p {
+        .info {
             font-size: 16px;
             font-family: $font-stack;
             font-weight: 300;

@@ -15,6 +15,7 @@ $(function(){
     	$(sLayer).addClass('active');
     });
 
+    //Increase or Decrease Number//
     $('.number-controller button').on('click',function(e){
         var value = $(this).attr('class');
         var numberText = $(this).siblings('span');
@@ -91,10 +92,11 @@ function updateStatus(t, c, p, d){
 function updateBreakfast(p){
     var totalcostPage = $('.layer-totalcost');
     var hasBreakfast = $('input[name=breakfast]:checked').val();
+
     if(hasBreakfast === "true"){
         totalcostPage.find('.has-breakfast').text(numberToDollar(p * 7));
     } else {
-        totalcostPage.find('.has-breakfast').text(numberToDollar(0));
+        totalcostPage.find('.has-breakfast').text('exclude breakfast');
     }
 }
 

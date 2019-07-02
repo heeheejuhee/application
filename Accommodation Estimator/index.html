@@ -94,7 +94,7 @@
 </div>
 
 
-<div class="layer layer-accommodation active">
+<div class="layer layer-accommodation">
     <div class="container">
         <!-- header -->
         <nav class="top-nav top-nav-color">
@@ -162,13 +162,13 @@
 
 
 
-<div class="layer layer-totalcost">
+<div class="layer layer-totalcost active">
     <div class="container">
         <nav class="top-nav top-nav-color">
             <a href="" data-target=".layer-accommodation"><i class="fas fa-chevron-left"></i></a>
             <h3 class="current-location">
                 <span class="title">HOTEL</span>
-                <p>(<span class="people">2</span> people, <span class="days">2</span> days)</p>
+                <div class="info">(<span class="people">2</span> people, <span class="days">2</span> days)</div>
             </h3>
             <a href=""><i class="fas fa-bars hide-bars"></i></a>
         </nav>
@@ -176,7 +176,7 @@
         <!-- contents -->
         <div class="contents">
             <h2 class="meal-question">Would you like to have a meal?</h2>
-            <p class="breakfast">(Breakfast only: $7.00)</p>
+            <p class="breakfast">(Breakfast only: $7.00 pp)</p>
 
             <div class="pretty p-default p-round">
                 <input type="radio" name="breakfast" value="false">
@@ -196,12 +196,18 @@
             <button class="see-result-btn total-cost">Total cost</button>
 
            <div id="Result" class="result">
-               <div class="title"></div>
-               <div class="people"></div>
-               <div class="days"></div>
-               <div class="final-cost"></div>
-               <div class="per-person"></div>
-               <div class="has-breakfast"></div>
+               <!-- The accommodation ypu choose <span class="title"></span> -->
+               
+            <div class="total-info">
+                <p class="people"></p> <p>people,</p> <p class="days"></p> <p>days at </p> <p class="title"></p> 
+            </div>
+            
+            <p class="summary">The accommodation cost will be about <span class="final-cost"></span> and breakfast meal is <span class="has-breakfast"></span>. Total cost is <span class="totalcost"></span>. That is <span class="per-person"></span> per person.
+            
+            </p> 
+
+               
+               
            </div> 
 
         </div>
