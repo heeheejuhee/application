@@ -66,7 +66,7 @@
     }
 
     .next {
-        margin-top: 3em;
+        margin-top: 6em;
         padding: 0.3em 1.7em;
     }
 	
@@ -87,7 +87,7 @@
 // 4 type buttons
 .contents-bottom {
     // text-align: center;
-    width: 65%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     margin: 4em auto;
@@ -96,6 +96,7 @@
     .accommodation-type {
         // display: flex;
         // display: inline-block;
+        margin:0.6em;
 
         .type{
             display:block;
@@ -109,6 +110,8 @@
             filter:brightness(0.5);
             transition: filter .3s ease-in-out;
             pointer-events: none;
+            width: 107%;
+            height: 100%;
 
             &.active {
                 pointer-events: auto;
@@ -118,42 +121,49 @@
             h3 {
                 font-family: $font-stack;
                 font-weight: 300; 
-                font-size: 1.3em;
+                font-size: 1.5em;
             }
 
             p {
                 font-family: $font-stack;
                 font-weight: 300;
-                font-size: 0.9em;
+                font-size: 1.2em;
             }
             &.hostel {
-                padding: 0.7em 1.7em;
+                padding: 0.7em 1.5em;
 
                 >img {
-                    width: 3em;
+                    width: 3.3em;
                 }
             }
 
             &.motel{
-                padding: 0.7em 1.74em;
+                padding: 0.7em 1.5em;
 
                 >img {
                     width: 3.5em;
                 }
+
+                h3 {
+                    margin-top: 0.3em;
+                }
             }
             &.hotel{
-                padding: 0.45em 1.5em;
+                padding: 0.7em 1.2em;
 
                 >img {
                     width: 3em;
                 }
             }
             &.house{
-                padding: 0.57em 1.5em;
+                padding: 0.7em 1.3em;
 
                 >img {
                     width: 3.2em;
                     margin: 0.3em 0em;
+                }
+                h3 {
+                    margin-top: 0.3em;
                 }
             }
         }
@@ -169,7 +179,7 @@
     padding: 1em;
     margin-top: 1.5em;
     border-radius: 10px;
-    height: 11em;
+    height: 13em;
     
     .total-info {
         font-size: 1.4em;
@@ -187,7 +197,7 @@
         color: $primary-color;
         font-family: $font-stack;
         font-weight: 400;
-        font-size: 1em;
+        font-size: 1.2em;
         margin-top: 1em;
 
         span {

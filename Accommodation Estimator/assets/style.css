@@ -51,8 +51,6 @@ body {
     font-size: 1.8em; }
   .top-nav .fa-bars {
     font-size: 1.6em; }
-  .top-nav .hide-bars {
-    display: none; }
 
 .top-nav-color {
   background-color: #002f51; }
@@ -257,7 +255,7 @@ body {
     margin-top: 0.5em;
     letter-spacing: 1.1px; }
   .contents .next {
-    margin-top: 3em;
+    margin-top: 6em;
     padding: 0.3em 1.7em; }
   .contents .total-cost {
     margin-top: 2em; }
@@ -268,50 +266,58 @@ body {
     color: lightgrey; }
 
 .contents-bottom {
-  width: 65%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
   margin: 4em auto;
   justify-content: center; }
-  .contents-bottom .accommodation-type .type {
-    display: block;
-    background-color: #333C4D;
-    color: white;
-    text-align: center;
-    border-radius: 10px;
-    border: 1.4px white solid;
-    margin: 0.2em;
-    filter: brightness(0.5);
-    transition: filter .3s ease-in-out;
-    pointer-events: none; }
-    .contents-bottom .accommodation-type .type.active {
-      pointer-events: auto;
-      filter: brightness(1); }
-    .contents-bottom .accommodation-type .type h3 {
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 300;
-      font-size: 1.3em; }
-    .contents-bottom .accommodation-type .type p {
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 300;
-      font-size: 0.9em; }
-    .contents-bottom .accommodation-type .type.hostel {
-      padding: 0.7em 1.7em; }
-      .contents-bottom .accommodation-type .type.hostel > img {
-        width: 3em; }
-    .contents-bottom .accommodation-type .type.motel {
-      padding: 0.7em 1.74em; }
-      .contents-bottom .accommodation-type .type.motel > img {
-        width: 3.5em; }
-    .contents-bottom .accommodation-type .type.hotel {
-      padding: 0.45em 1.5em; }
-      .contents-bottom .accommodation-type .type.hotel > img {
-        width: 3em; }
-    .contents-bottom .accommodation-type .type.house {
-      padding: 0.57em 1.5em; }
-      .contents-bottom .accommodation-type .type.house > img {
-        width: 3.2em;
-        margin: 0.3em 0em; }
+  .contents-bottom .accommodation-type {
+    margin: 0.6em; }
+    .contents-bottom .accommodation-type .type {
+      display: block;
+      background-color: #333C4D;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      border: 1.4px white solid;
+      margin: 0.2em;
+      filter: brightness(0.5);
+      transition: filter .3s ease-in-out;
+      pointer-events: none;
+      width: 107%;
+      height: 100%; }
+      .contents-bottom .accommodation-type .type.active {
+        pointer-events: auto;
+        filter: brightness(1); }
+      .contents-bottom .accommodation-type .type h3 {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 300;
+        font-size: 1.5em; }
+      .contents-bottom .accommodation-type .type p {
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 300;
+        font-size: 1.2em; }
+      .contents-bottom .accommodation-type .type.hostel {
+        padding: 0.7em 1.5em; }
+        .contents-bottom .accommodation-type .type.hostel > img {
+          width: 3.3em; }
+      .contents-bottom .accommodation-type .type.motel {
+        padding: 0.7em 1.5em; }
+        .contents-bottom .accommodation-type .type.motel > img {
+          width: 3.5em; }
+        .contents-bottom .accommodation-type .type.motel h3 {
+          margin-top: 0.3em; }
+      .contents-bottom .accommodation-type .type.hotel {
+        padding: 0.7em 1.2em; }
+        .contents-bottom .accommodation-type .type.hotel > img {
+          width: 3em; }
+      .contents-bottom .accommodation-type .type.house {
+        padding: 0.7em 1.3em; }
+        .contents-bottom .accommodation-type .type.house > img {
+          width: 3.2em;
+          margin: 0.3em 0em; }
+        .contents-bottom .accommodation-type .type.house h3 {
+          margin-top: 0.3em; }
 
 .result {
   background-color: lightgrey;
@@ -319,7 +325,7 @@ body {
   padding: 1em;
   margin-top: 1.5em;
   border-radius: 10px;
-  height: 11em; }
+  height: 13em; }
   .result .total-info {
     font-size: 1.4em; }
     .result .total-info p {
@@ -332,10 +338,43 @@ body {
     color: #333C4D;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1.2em;
     margin-top: 1em; }
     .result .summary span {
       font-weight: 600;
       text-decoration: underline; }
+
+.wrapper {
+  width: 80%;
+  background-color: #f7f7f7;
+  margin: 1em auto;
+  border-radius: 10px; }
+  .wrapper .accomo-image {
+    overflow: hidden;
+    border-radius: 10px; }
+    .wrapper .accomo-image img {
+      width: 100%;
+      height: 100%; }
+  .wrapper .accomo-info {
+    padding: 0.2em 1em 0.4em 1em; }
+    .wrapper .accomo-info .info-title {
+      display: flex;
+      align-items: baseline; }
+      .wrapper .accomo-info .info-title h2 {
+        color: #333C4D; }
+      .wrapper .accomo-info .info-title p {
+        padding-left: 1.8em;
+        color: #828282; }
+    .wrapper .accomo-info .star {
+      display: flex;
+      align-items: center;
+      padding-top: 0.4em; }
+      .wrapper .accomo-info .star i {
+        font-size: 1.5em;
+        color: #333C4D; }
+      .wrapper .accomo-info .star h2 {
+        font-size: 1.8em;
+        padding-left: 0.2em;
+        color: #333C4D; }
 
 /*# sourceMappingURL=style.css.map */

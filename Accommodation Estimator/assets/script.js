@@ -15,7 +15,7 @@ $(function(){
 
     $('a').on('click',function(e){
         e.preventDefault();
-    })
+    });
 
     $('a[data-target]').on('click',function(e){
     	e.preventDefault();
@@ -34,7 +34,7 @@ $(function(){
         var currentNumber = parseInt(numberText.text());
         var maxNumber = 15;
 
-        if(forPeople){ maxNumber = 4 };
+        if(forPeople){ maxNumber = 4 ;}
 
         if(value === 'plus'){
             if(currentNumber < maxNumber ){
@@ -78,7 +78,7 @@ $(function(){
         if($('[name=breakfast][value=true]:checked').length>0){
             mealCost = mealPrice * daysValue *peopleValue;
             
-        } else{ mealCost = 0}
+        } else{ mealCost = 0;}
 
         total = accomodatCost + mealCost;
         updateStatus();
@@ -86,7 +86,7 @@ $(function(){
     });
 
 
-})
+});
 
 
       
@@ -94,11 +94,6 @@ $(function(){
       //       $('#Result').addClass('active');
       //       updateBreakfast(peopleValue);
       //   })
-$('.grid').masonry({
-  // options...
-  itemSelector: '.grid-item',
-  columnWidth: 200
-});
 
 function updateStatus(){
 
