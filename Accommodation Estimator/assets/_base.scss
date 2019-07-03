@@ -49,6 +49,15 @@ body {
         font-weight: 600;
         font-size: 1.5em;
         letter-spacing: 1.5px;
+        text-align: center;
+
+        .info {
+            font-size: 16px;
+            font-family: $font-stack;
+            font-weight: 300;
+            text-transform: lowercase;
+        }
+
     }
     a {
         color: white;
@@ -63,15 +72,6 @@ body {
         display: none;
     }
 
-    h3 {
-        text-align: center;
-        .info {
-            font-size: 16px;
-            font-family: $font-stack;
-            font-weight: 300;
-            text-transform: lowercase;
-        }
-    }
 
 }
 

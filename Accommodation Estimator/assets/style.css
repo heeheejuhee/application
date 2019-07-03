@@ -38,7 +38,13 @@ body {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 600;
     font-size: 1.5em;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    text-align: center; }
+    .top-nav .current-location .info {
+      font-size: 16px;
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 300;
+      text-transform: lowercase; }
   .top-nav a {
     color: white; }
   .top-nav .fa-chevron-left {
@@ -47,13 +53,6 @@ body {
     font-size: 1.6em; }
   .top-nav .hide-bars {
     display: none; }
-  .top-nav h3 {
-    text-align: center; }
-    .top-nav h3 .info {
-      font-size: 16px;
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 300;
-      text-transform: lowercase; }
 
 .top-nav-color {
   background-color: #002f51; }
@@ -257,6 +256,9 @@ body {
     border: 1.47px white solid;
     margin-top: 0.5em;
     letter-spacing: 1.1px; }
+  .contents .next {
+    margin-top: 3em;
+    padding: 0.3em 1.7em; }
   .contents .total-cost {
     margin-top: 2em; }
   .contents p {
@@ -279,8 +281,10 @@ body {
     border: 1.4px white solid;
     margin: 0.2em;
     filter: brightness(0.5);
-    transition: filter .3s ease-in-out; }
+    transition: filter .3s ease-in-out;
+    pointer-events: none; }
     .contents-bottom .accommodation-type .type.active {
+      pointer-events: auto;
       filter: brightness(1); }
     .contents-bottom .accommodation-type .type h3 {
       font-family: "Source Sans Pro", sans-serif;
@@ -313,7 +317,8 @@ body {
   height: 11em;
   padding: 1em;
   margin-top: 1.5em;
-  border-radius: 10px; }
+  border-radius: 10px;
+  height: 11em; }
   .result .total-info {
     font-size: 1.4em; }
     .result .total-info p {
@@ -326,7 +331,7 @@ body {
     color: #333C4D;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
-    font-size: 1.1em;
+    font-size: 1em;
     margin-top: 1em; }
     .result .summary span {
       font-weight: 600;

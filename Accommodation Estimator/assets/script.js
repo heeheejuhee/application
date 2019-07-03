@@ -1,3 +1,12 @@
+var peopleValue = 0;
+var daysValue = 0;
+var dailyCost = 0;
+var type = '';
+var mealPrice = 7;
+var accomodatCost = 0;
+var mealCost = 0;
+var total =0;
+
 $(function(){
 
 	setTimeout(function(){
@@ -37,10 +46,12 @@ $(function(){
         numberText.text(currentNumber);
     });
 
+    
+
     //Accommodation Result button
     $('.see-result-btn:not(.total-cost)').on('click',function(){
-        var peopleValue = parseInt($('.number-controller-people span').text());
-        var daysValue = parseInt($('.number-controller-days span').text());
+        peopleValue = parseInt($('.number-controller-people span').text());
+        daysValue = parseInt($('.number-controller-days span').text());
         var allTypes = $('.accommodation-type');
         var types = {
             hostel: allTypes.children('.hostel'),
@@ -62,44 +73,83 @@ $(function(){
         if(  peopleValue < 3 && daysValue < 6 ){
             types.hotel.addClass('active');
         }
-
-        $('.accommodation-type .type.active').unbind('click').on('click',function(){
-            var type = $(this).data('type');
-            var cost = $(this).data('cost');
-            updateStatus(type, cost, peopleValue, daysValue);
-
-            $('.layer').removeClass('active');
-            $('.layer.layer-totalcost').addClass('active');
-        })
-        $('.total-cost').unbind('click').on('click',function(){
-            $('#Result').addClass('active');
-            updateBreakfast(peopleValue);
-        })
+  
     });
+
+    //Next button
+    $('.next').on('click',function(e){
+        e.preventDefault();
+        var sLayer = $(this).data('target');
+        $('.active').removeClass('active');
+        $(sLayer).addClass('active');
+    });
+
+    $('.accommodation-type .type').on('click',function(){
+        type = $(this).data('type');
+        dailyCost = $(this).data('cost');
+        accomodatCost = dailyCost*daysValue;
+        // updateStatus();
+
+        $('.layer').removeClass('active');
+        $('.layer.layer-totalcost').addClass('active');
+    });
+
+    $('.total-cost').on('click',function(){
+        
+         $('#Result').addClass('active');
+        if($('[name=breakfast][value=true]:checked').length>0){
+            mealCost = mealPrice * daysValue *peopleValue;
+        }
+
+        total = accomodatCost + mealCost;
+        updateStatus();
+        // console.log(total);
+    })
+
+
 })
 
-function updateStatus(t, c, p, d){
-    var totalcostPage = $('.layer-totalcost');
-    var cost = d * c;
-    var perPerson = cost / p;
 
-    totalcostPage.find('.title').text(t);
-    totalcostPage.find('.people').text(p);
-    totalcostPage.find('.days').text(d);
-    totalcostPage.find('.final-cost').text(numberToDollar(cost));
+      
+      //   $('.total-cost').unbind('click').on('click',function(){
+      //       $('#Result').addClass('active');
+      //       updateBreakfast(peopleValue);
+      //   })
+$('.grid').masonry({
+  // options...
+  itemSelector: '.grid-item',
+  columnWidth: 200
+});
+
+function updateStatus(){
+
+    var totalcostPage = $('.layer-totalcost');
+    accomodatCost = daysValue*dailyCost;
+    var perPerson = total / peopleValue;
+   
+
+
+    totalcostPage.find('.title').text(type);
+    totalcostPage.find('.people').text(peopleValue);
+    totalcostPage.find('.days').text(daysValue);
+    totalcostPage.find('.final-cost').text(numberToDollar(accomodatCost));
+    totalcostPage.find('.has-breakfast').text(numberToDollar(mealCost));
+    totalcostPage.find('.totalcost').text(numberToDollar(total));
     totalcostPage.find('.per-person').text(numberToDollar(perPerson));
 }
-function updateBreakfast(p){
-    var totalcostPage = $('.layer-totalcost');
-    var hasBreakfast = $('input[name=breakfast]:checked').val();
 
-    if(hasBreakfast === "true"){
-        totalcostPage.find('.has-breakfast').text(numberToDollar(p * 7));
-    } else {
-        totalcostPage.find('.has-breakfast').text('exclude breakfast');
-    }
-}
+// function updateBreakfast(p){
+//      var mealCost = 0;
+//     if($('[name=breakfast][value=true]:checked').length>0){
+//         mealCost = mealPrice * daysValue *peopleValue;
+//     }
+
+//     var total = cost + mealCost;
+
+// }
 
 function numberToDollar(num){
     return "$" + parseFloat(Math.round(num * 100) / 100).toFixed(2);
 }
+
+
