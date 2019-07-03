@@ -212,7 +212,7 @@ body {
 
 .contents {
   width: 78%;
-  margin: 1em auto;
+  margin: 2em auto;
   text-align: center;
   color: white; }
   .contents > h2 {
@@ -271,7 +271,8 @@ body {
   width: 65%;
   display: flex;
   flex-wrap: wrap;
-  margin: auto; }
+  margin: 4em auto;
+  justify-content: center; }
   .contents-bottom .accommodation-type .type {
     display: block;
     background-color: #333C4D;

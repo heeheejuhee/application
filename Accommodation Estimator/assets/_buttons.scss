@@ -1,7 +1,7 @@
 
 .contents {
 	width: 78%;
-    margin: 1em auto;
+    margin: 2em auto;
     text-align: center;
     color: white;
 
@@ -90,7 +90,8 @@
     width: 65%;
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
+    margin: 4em auto;
+    justify-content: center;
 
     .accommodation-type {
         // display: flex;
